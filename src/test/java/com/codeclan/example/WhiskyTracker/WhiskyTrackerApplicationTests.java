@@ -12,6 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class WhiskyTrackerApplicationTests {
@@ -39,6 +41,7 @@ public class WhiskyTrackerApplicationTests {
 	@Test
 	public void findWhiskyInDistilleryByAge(){
 		List<Whisky> found = whiskyRepository.findWhiskyByDistilleryAndAge("Rosebank",12);
+		assertEquals(1991,found.get(0).getYear());
 	}
 
 }
