@@ -43,5 +43,7 @@ public class WhiskyTrackerApplicationTests {
 		List<Whisky> found = whiskyRepository.findWhiskyByDistilleryAndAge("Rosebank",12);
 		assertEquals(1991,found.get(0).getYear());
 	}
+	//gimme all whiskies in a distillery that are 12 years old.
+	//find a distillery, then find age. return whisky in distillery by that age.
 
 }
